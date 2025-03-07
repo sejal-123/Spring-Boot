@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="org.example.Dev" id="dev1">
+<!--       ========= Setter injection =========  -->
+<!--        <property name="age" value="15" />-->
+
+<!--        ======== Constructor injection =========   -->
+<!--        <constructor-arg name="age" value="20" />-->
+
+<!--        <property name="laptop" ref="lap" />-->
+
+<!--        <constructor-arg name="laptop" ref="lap" />-->
+
+<!--        <constructor-arg name="comp" ref="desk" />-->
+
+<!--        <property name="comp" ref="lap" />-->
+
+
+    </bean>
+<!--  ========  Autowire by name ========== -->
+    <bean class="org.example.Dev" id="dev2" autowire="byName"> </bean>
+<!--    <bean class="org.example.Laptop" id="lap"></bean>-->
+<!--    <bean class="org.example.Desktop" id="comp"></bean>-->
+
+<!--  ========  Autowire by type ======== -->
+
+    <bean class="org.example.Dev" id="dev" autowire="byType"> </bean>
+    <bean class="org.example.Laptop" id="lap" primary="true"></bean>
+    <bean class="org.example.Desktop" id="comp"></bean>
+
+<!--    <bean class="org.example.Laptop" id="lap"></bean>-->
+<!--    <bean class="org.example.Desktop" id="desk"></bean>-->
+
+
+</beans>
