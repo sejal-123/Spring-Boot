@@ -24,9 +24,15 @@ public class UserController {
         return service.getUsers();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/register")
     public Users addUser(@RequestBody Users user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         return service.addUser(user);
+    }
+
+    @PostMapping("/login")
+    public String verify(@RequestBody Users user) {
+        System.out.println(user);
+        return service.verifyUser(user);
     }
 }
