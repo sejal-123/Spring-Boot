@@ -37,12 +37,12 @@ public class QuestionController {
         return questionService.getQuestionsForQuiz(category, numQ);
     }
 
-    @GetMapping("/getQuestions")
+    @PostMapping("/getQuestions")
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromIds(@RequestBody List<Integer> questionIds) {
         return questionService.getQuestionsFromIds(questionIds);
     }
 
-    @GetMapping("/score")
+    @PostMapping("/score")
     public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses) {
         return questionService.getScore(responses);
     }

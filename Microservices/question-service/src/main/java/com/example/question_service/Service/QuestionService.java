@@ -5,6 +5,7 @@ import com.example.question_service.model.Question;
 import com.example.question_service.model.QuestionWrapper;
 import com.example.question_service.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,9 @@ public class QuestionService {
 
     @Autowired
     QuestionRepo repo;
+
+    @Autowired
+    Environment environment;
 
     public ResponseEntity<List<Question>> getAllQuestions() {
         return new ResponseEntity<>(repo.findAll(), HttpStatus.OK);
@@ -42,6 +46,7 @@ public class QuestionService {
     }
 
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromIds(List<Integer> questionIds) {
+        System.out.println(environment.getProperty("local.server.port"));
         List<QuestionWrapper> questionWrappers = new ArrayList<>();
         List<Question> questions = new ArrayList<>();
         for(Integer q: questionIds) {
