@@ -37,8 +37,8 @@ public class QuizService {
         Quiz quiz = quizRepo.findById(id).get();
         List<Integer> questionsIdsFromDB = quiz.getQuestionsIds();
         System.out.println(questionsIdsFromDB);
-        List<QuestionWrapper> qw = quizInterface.getQuestionsFromIds(questionsIdsFromDB).getBody();
-        return new ResponseEntity<>(qw, HttpStatus.OK);
+        ResponseEntity<List<QuestionWrapper>> qw = quizInterface.getQuestionsFromIds(questionsIdsFromDB);
+        return qw;
     }
 
     public ResponseEntity<Integer> getScore(int id, List<Response> responses) {
