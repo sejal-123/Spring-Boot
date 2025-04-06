@@ -1,65 +1,45 @@
 package com.example.test_junit;
 
+import com.example.test_junit.model.User;
 import com.example.test_junit.repo.UserRepo;
+import com.example.test_junit.service.UserService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.ArgumentMatchers;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
-@SpringBootTest
+import static org.mockito.Mockito.when;
+
 public class UserServiceTest {
-
-    @Autowired
+    @Mock
     UserRepo userRepo;
 
-    @Test
-    public void test1() {
-        assertEquals(4, 2+2);
-    }
-
-    @BeforeAll
-    public static void beforeAllMethod() {
-        System.out.println("This will get executed only once before executing all testcases");
-    }
+    @InjectMocks
+    private UserService userService;
 
     @BeforeEach
-    public void beforeEachMethod() {
-        System.out.println("This will get executed every time before executing each testcase");
-    }
-
-    @Test
-    public void testUser() {
-        assertNotNull(userRepo.findAll());
-        assertNotNull(userRepo.findById(1));
-        assertNotNull(userRepo.findById(3));
+    void initialize() {
+        MockitoAnnotations.initMocks(this);
     }
 
     @ParameterizedTest
     @CsvSource({
-            "sejal",
-            "varun",
-//            "dhruv"
+            "1",
+            "2"
     })
-    public void findByUsername(String name) {
-        assertNotNull(userRepo.findByUsername(name));
+    public void getUserTest(int id) {
+        when(userRepo.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.of(new User(id, "test", "test")));
+        User u = userService.getUser(id).getBody();
+        Assertions.assertNotNull(u);
     }
-
-    @Disabled
-    @ParameterizedTest
-    @CsvSource({
-            "1,2,3",
-            "2,3,5",
-//            "3,4,10"
-    })
-    public void test2(int a, int b, int expected) {
-        assertEquals(expected, a+b);
-    }
-
 }
