@@ -1,0 +1,428 @@
+27-04-25 20:01:54.468 [main] INFO  c.e.JournalApp.JournalAppApplication -- Starting JournalAppApplication using Java 21.0.5 with PID 5216 (C:\DEV\Spring-Boot\JournalApp\target\classes started by ADMIN in C:\DEV\Spring-Boot\JournalApp) 
+27-04-25 20:01:54.474 [main] INFO  c.e.JournalApp.JournalAppApplication -- No active profile set, falling back to 1 default profile: "default" 
+27-04-25 20:01:55.527 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+27-04-25 20:01:55.621 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 84 ms. Found 2 MongoDB repository interfaces. 
+27-04-25 20:01:56.540 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port 8080 (http) 
+27-04-25 20:01:56.557 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:01:56.559 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat] 
+27-04-25 20:01:56.560 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.39] 
+27-04-25 20:01:56.811 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext 
+27-04-25 20:01:56.816 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 2226 ms 
+27-04-25 20:01:59.415 [main] INFO  org.mongodb.driver.client -- MongoClient with metadata {"application": {"name": "NodeJS"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.5+9-LTS-239"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sejal', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@6b4fc2d1, com.mongodb.Jep395RecordCodecProvider@8bd076a, com.mongodb.KotlinCodecProvider@1de4285e]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=nodejs.mgakq.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-42l36u-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='NodeJS', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
+27-04-25 20:01:59.803 [main] INFO  org.mongodb.driver.cluster -- Waiting for server to become available for operation with ID 2. Remaining time: 29987 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[]. 
+27-04-25 20:02:01.482 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-02.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:02:01.528 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-01.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:02:01.531 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-00.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:02:03.261 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-nodejs-shard-00-02.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-02.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=280966700, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-02.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d27258170d7567c88dae7, counter=3}, lastWriteDate=Sun Apr 27 20:02:03 IST 2025, lastUpdateTimeNanos=31744783786500} 
+27-04-25 20:02:03.261 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-nodejs-shard-00-00.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-00.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=211700300, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-00.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d25bfc85b2e78d3094be6, counter=4}, lastWriteDate=Sun Apr 27 20:02:03 IST 2025, lastUpdateTimeNanos=31744783975600} 
+27-04-25 20:02:03.262 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-01.mgakq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=297369000, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-01.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000e3, setVersion=262, topologyVersion=TopologyVersion{processId=680d24a09a6f4e92324b31ff, counter=6}, lastWriteDate=Sun Apr 27 20:02:03 IST 2025, lastUpdateTimeNanos=31744783786400} 
+27-04-25 20:02:03.266 [cluster-ClusterId{value='680e3fdf502db40baab92106', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Discovered replica set primary nodejs-shard-00-01.mgakq.mongodb.net:27017 with max election id 7fffffff00000000000000e3 and max set version 262 
+27-04-25 20:02:04.172 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:02:04.188 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port 8080 (http) with context path '/' 
+27-04-25 20:02:04.196 [main] INFO  c.e.JournalApp.JournalAppApplication -- Started JournalAppApplication in 10.495 seconds (process running for 11.34) 
+27-04-25 20:02:22.427 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet' 
+27-04-25 20:02:22.427 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet' 
+27-04-25 20:02:22.430 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 1 ms 
+27-04-25 20:02:22.984 [http-nio-8080-exec-2] INFO  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:02:22.984 [http-nio-8080-exec-2] ERROR c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:02:22.984 [http-nio-8080-exec-2] WARN  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:02:34.755 [http-nio-8080-exec-4] ERROR c.e.JournalApp.service.UserService -- Error occurred while creating user sejal 
+org.springframework.dao.DuplicateKeyException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:108)
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3017)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:605)
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1536)
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1337)
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1263)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:731)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.save(Unknown Source)
+	at com.example.JournalApp.service.UserService.createUser(UserService.java:32)
+	at com.example.JournalApp.controller.UserController.createUser(UserController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.MongoWriteException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1123)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:498)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:481)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:475)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$17(MongoTemplate.java:1542)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	... 73 common frames omitted
+27-04-25 20:02:59.516 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -- Commencing graceful shutdown. Waiting for active requests to complete 
+27-04-25 20:02:59.533 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -- Graceful shutdown complete 
+27-04-25 20:03:02.365 [main] INFO  c.e.JournalApp.JournalAppApplication -- Starting JournalAppApplication using Java 21.0.5 with PID 9876 (C:\DEV\Spring-Boot\JournalApp\target\classes started by ADMIN in C:\DEV\Spring-Boot\JournalApp) 
+27-04-25 20:03:02.371 [main] INFO  c.e.JournalApp.JournalAppApplication -- No active profile set, falling back to 1 default profile: "default" 
+27-04-25 20:03:03.368 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+27-04-25 20:03:03.456 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 77 ms. Found 2 MongoDB repository interfaces. 
+27-04-25 20:03:04.185 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port 8080 (http) 
+27-04-25 20:03:04.206 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:03:04.206 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat] 
+27-04-25 20:03:04.206 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.39] 
+27-04-25 20:03:04.281 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext 
+27-04-25 20:03:04.281 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 1809 ms 
+27-04-25 20:03:06.732 [main] INFO  org.mongodb.driver.client -- MongoClient with metadata {"application": {"name": "NodeJS"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.5+9-LTS-239"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sejal', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3b2e5c0d, com.mongodb.Jep395RecordCodecProvider@7499eac7, com.mongodb.KotlinCodecProvider@5438c17a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=nodejs.mgakq.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-42l36u-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='NodeJS', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
+27-04-25 20:03:07.134 [main] INFO  org.mongodb.driver.cluster -- Waiting for server to become available for operation with ID 2. Remaining time: 29985 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[]. 
+27-04-25 20:03:08.727 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-02.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:03:08.779 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-01.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:03:08.784 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-00.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:03:10.593 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-01.mgakq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=325071900, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-01.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000e3, setVersion=262, topologyVersion=TopologyVersion{processId=680d24a09a6f4e92324b31ff, counter=6}, lastWriteDate=Sun Apr 27 20:03:10 IST 2025, lastUpdateTimeNanos=31812116017700} 
+27-04-25 20:03:10.593 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-nodejs-shard-00-00.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-00.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=301463900, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-00.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d25bfc85b2e78d3094be6, counter=4}, lastWriteDate=Sun Apr 27 20:03:10 IST 2025, lastUpdateTimeNanos=31812116017700} 
+27-04-25 20:03:10.593 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-nodejs-shard-00-02.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-02.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=105304800, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-02.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d27258170d7567c88dae7, counter=3}, lastWriteDate=Sun Apr 27 20:03:10 IST 2025, lastUpdateTimeNanos=31812116948500} 
+27-04-25 20:03:10.597 [cluster-ClusterId{value='680e4022374bd11ea272c782', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Discovered replica set primary nodejs-shard-00-01.mgakq.mongodb.net:27017 with max election id 7fffffff00000000000000e3 and max set version 262 
+27-04-25 20:03:11.788 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:03:11.813 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port 8080 (http) with context path '/' 
+27-04-25 20:03:11.822 [main] INFO  c.e.JournalApp.JournalAppApplication -- Started JournalAppApplication in 10.093 seconds (process running for 11.115) 
+27-04-25 20:03:12.664 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet' 
+27-04-25 20:03:12.664 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet' 
+27-04-25 20:03:12.664 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 0 ms 
+27-04-25 20:03:13.262 [http-nio-8080-exec-1] ERROR c.e.JournalApp.service.UserService -- Error occurred while creating user sejal 
+org.springframework.dao.DuplicateKeyException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:108)
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3017)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:605)
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1536)
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1337)
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1263)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:731)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.save(Unknown Source)
+	at com.example.JournalApp.service.UserService.createUser(UserService.java:32)
+	at com.example.JournalApp.controller.UserController.createUser(UserController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.MongoWriteException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1123)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:498)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:481)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:475)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$17(MongoTemplate.java:1542)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	... 73 common frames omitted
+27-04-25 20:03:21.697 [http-nio-8080-exec-4] INFO  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:03:21.698 [http-nio-8080-exec-4] ERROR c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:03:21.698 [http-nio-8080-exec-4] WARN  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:03:50.185 [http-nio-8080-exec-6] INFO  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:03:50.185 [http-nio-8080-exec-6] ERROR c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:03:50.200 [http-nio-8080-exec-6] WARN  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:06:50.821 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -- Commencing graceful shutdown. Waiting for active requests to complete 
+27-04-25 20:06:50.835 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -- Graceful shutdown complete 
+27-04-25 20:06:53.946 [main] INFO  c.e.JournalApp.JournalAppApplication -- Starting JournalAppApplication using Java 21.0.5 with PID 12156 (C:\DEV\Spring-Boot\JournalApp\target\classes started by ADMIN in C:\DEV\Spring-Boot\JournalApp) 
+27-04-25 20:06:53.950 [main] INFO  c.e.JournalApp.JournalAppApplication -- No active profile set, falling back to 1 default profile: "default" 
+27-04-25 20:06:55.110 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+27-04-25 20:06:55.203 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 82 ms. Found 2 MongoDB repository interfaces. 
+27-04-25 20:06:56.123 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port 8080 (http) 
+27-04-25 20:06:56.143 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:06:56.145 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat] 
+27-04-25 20:06:56.146 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.39] 
+27-04-25 20:06:56.225 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext 
+27-04-25 20:06:56.228 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 2122 ms 
+27-04-25 20:06:58.692 [main] INFO  org.mongodb.driver.client -- MongoClient with metadata {"application": {"name": "NodeJS"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.5+9-LTS-239"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sejal', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@54336976, com.mongodb.Jep395RecordCodecProvider@f25f48a, com.mongodb.KotlinCodecProvider@3b7c80c6]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=nodejs.mgakq.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-42l36u-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='NodeJS', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
+27-04-25 20:06:59.143 [main] INFO  org.mongodb.driver.cluster -- Waiting for server to become available for operation with ID 2. Remaining time: 29984 ms. Selector: WritableServerSelector, topology description: {type=UNKNOWN, servers=[]. 
+27-04-25 20:07:00.733 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-02.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:07:00.766 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-01.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:07:00.770 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-srv-nodejs.mgakq.mongodb.net] INFO  org.mongodb.driver.cluster -- Adding discovered server nodejs-shard-00-00.mgakq.mongodb.net:27017 to client view of cluster 
+27-04-25 20:07:02.584 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-01.mgakq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=163220700, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-01.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000e3, setVersion=262, topologyVersion=TopologyVersion{processId=680d24a09a6f4e92324b31ff, counter=6}, lastWriteDate=Sun Apr 27 20:07:02 IST 2025, lastUpdateTimeNanos=32044107394400} 
+27-04-25 20:07:02.585 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-02.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-02.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=248370700, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-02.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d27258170d7567c88dae7, counter=3}, lastWriteDate=Sun Apr 27 20:07:02 GMT+05:30 2025, lastUpdateTimeNanos=32044107907000} 
+27-04-25 20:07:02.586 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-00.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-00.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=308186800, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-00.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d25bfc85b2e78d3094be6, counter=4}, lastWriteDate=Sun Apr 27 20:07:02 GMT+05:30 2025, lastUpdateTimeNanos=32044113003400} 
+27-04-25 20:07:02.593 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Discovered replica set primary nodejs-shard-00-01.mgakq.mongodb.net:27017 with max election id 7fffffff00000000000000e3 and max set version 262 
+27-04-25 20:07:03.522 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"] 
+27-04-25 20:07:03.537 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port 8080 (http) with context path '/' 
+27-04-25 20:07:03.546 [main] INFO  c.e.JournalApp.JournalAppApplication -- Started JournalAppApplication in 10.189 seconds (process running for 10.924) 
+27-04-25 20:07:08.922 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet' 
+27-04-25 20:07:08.922 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet' 
+27-04-25 20:07:08.923 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 1 ms 
+27-04-25 20:07:09.406 [http-nio-8080-exec-1] INFO  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:07:09.406 [http-nio-8080-exec-1] ERROR c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:07:09.406 [http-nio-8080-exec-1] WARN  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:07:27.138 [http-nio-8080-exec-3] ERROR c.e.JournalApp.service.UserService -- Error occurred while creating user sejal 
+org.springframework.dao.DuplicateKeyException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.doTranslateException(MongoExceptionTranslator.java:108)
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:74)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3017)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:605)
+	at org.springframework.data.mongodb.core.MongoTemplate.insertDocument(MongoTemplate.java:1536)
+	at org.springframework.data.mongodb.core.MongoTemplate.doInsert(MongoTemplate.java:1337)
+	at org.springframework.data.mongodb.core.MongoTemplate.insert(MongoTemplate.java:1263)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.save(SimpleMongoRepository.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:731)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:158)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.save(Unknown Source)
+	at com.example.JournalApp.service.UserService.createUser(UserService.java:32)
+	at com.example.JournalApp.controller.UserController.createUser(UserController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.MongoWriteException: Write operation error on server nodejs-shard-00-01.mgakq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journaldb.user index: username dup key: { username: "sejal" }', details={}}.
+	at com.mongodb.client.internal.MongoCollectionImpl.executeSingleWriteRequest(MongoCollectionImpl.java:1123)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeInsertOne(MongoCollectionImpl.java:498)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:481)
+	at com.mongodb.client.internal.MongoCollectionImpl.insertOne(MongoCollectionImpl.java:475)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$insertDocument$17(MongoTemplate.java:1542)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	... 73 common frames omitted
+27-04-25 20:07:30.858 [http-nio-8080-exec-6] INFO  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:07:30.858 [http-nio-8080-exec-6] ERROR c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:07:30.859 [http-nio-8080-exec-6] WARN  c.e.J.service.JournalService -- Error occurred 
+27-04-25 20:09:42.753 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Exception in monitor thread while connecting to server nodejs-shard-00-01.mgakq.mongodb.net:27017 
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+27-04-25 20:09:42.753 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-02.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Exception in monitor thread while connecting to server nodejs-shard-00-02.mgakq.mongodb.net:27017 
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+27-04-25 20:09:42.753 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-00.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Exception in monitor thread while connecting to server nodejs-shard-00-00.mgakq.mongodb.net:27017 
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+27-04-25 20:09:50.142 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-00.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-00.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24759000, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-00.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d25bfc85b2e78d3094be6, counter=4}, lastWriteDate=Sun Apr 27 20:09:50 GMT+05:30 2025, lastUpdateTimeNanos=32211667392100} 
+27-04-25 20:09:50.145 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-01.mgakq.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24649000, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-01.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000000e3, setVersion=262, topologyVersion=TopologyVersion{processId=680d24a09a6f4e92324b31ff, counter=6}, lastWriteDate=Sun Apr 27 20:09:50 GMT+05:30 2025, lastUpdateTimeNanos=32211671333400} 
+27-04-25 20:09:50.146 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-01.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Discovered replica set primary nodejs-shard-00-01.mgakq.mongodb.net:27017 with max election id 7fffffff00000000000000e3 and max set version 262 
+27-04-25 20:09:50.293 [cluster-ClusterId{value='680e410acca2e67f1d8f15e4', description='NodeJS'}-nodejs-shard-00-02.mgakq.mongodb.net:27017] INFO  org.mongodb.driver.cluster -- Monitor thread successfully connected to server with description ServerDescription{address=nodejs-shard-00-02.mgakq.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=39432900, minRoundTripTimeNanos=0, setName='atlas-42l36u-shard-0', canonicalAddress=nodejs-shard-00-02.mgakq.mongodb.net:27017, hosts=[nodejs-shard-00-01.mgakq.mongodb.net:27017, nodejs-shard-00-02.mgakq.mongodb.net:27017, nodejs-shard-00-00.mgakq.mongodb.net:27017], passives=[], arbiters=[], primary='nodejs-shard-00-01.mgakq.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=262, topologyVersion=TopologyVersion{processId=680d27258170d7567c88dae7, counter=3}, lastWriteDate=Sun Apr 27 20:09:50 GMT+05:30 2025, lastUpdateTimeNanos=32211820241700} 

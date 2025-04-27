@@ -4,6 +4,8 @@ import com.example.JournalApp.model.Journal;
 import com.example.JournalApp.model.User;
 import com.example.JournalApp.repository.JournalRepo;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +22,8 @@ public class JournalService {
 
     @Autowired
     private UserService userService;
+
+    Logger logger = LoggerFactory.getLogger(JournalService.class);
 
     public Journal createJournal(Journal journal) {
         return journalRepo.save(journal);
@@ -40,8 +44,11 @@ public class JournalService {
             journal.setDate(LocalDateTime.now());
             Journal saved = journalRepo.save(journal);
             user.getJournalEntries().add(saved);
-            userService.updateUser(user);
+            userService.updateUser(null);
         } catch(Exception e) {
+            logger.info("Error occurred");
+            logger.error("Error occurred");
+            logger.warn("Error occurred");
             throw new RuntimeException("An error occured while saving entry", e);
         }
     }
