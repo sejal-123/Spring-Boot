@@ -1,7 +1,9 @@
 package com.example.JournalApp.controller;
 
+import com.example.JournalApp.api.Weather;
 import com.example.JournalApp.model.User;
 import com.example.JournalApp.service.UserService;
+import com.example.JournalApp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private WeatherService weatherService;
 
     @GetMapping("")
     public ResponseEntity<List<User>> getAll() {
@@ -66,6 +71,16 @@ public class UserController {
         } else  {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/weather")
+    public ResponseEntity<String> getWeatherDetails(@RequestParam String city) {
+        Weather weather = weatherService.getWeather(city);
+        if (weather != null) {
+            String result = "Hi, weather is " + weather.getCurrent().getTemperature() + " in " + city;
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        }
+        return new ResponseEntity<>("", HttpStatus.BAD_GATEWAY);
     }
 
 
