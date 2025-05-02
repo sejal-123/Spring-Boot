@@ -1,6 +1,7 @@
 package com.example.JournalApp.service;
 
 import com.example.JournalApp.api.Weather;
+import com.example.JournalApp.cache.AppCache;
 import com.example.JournalApp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,8 +24,11 @@ public class WeatherService {
     @Autowired
     UserService userService;
 
+    @Autowired
+    private AppCache appCache;
+
     public Weather getWeather(String city) {
-        String finalAPI=API_URL.replace("API_KEY", API_KEY).replace("CITY", city);
+        String finalAPI=appCache.cacheMap.get(AppCache.keys.WEATHER_API.toString()).replace("<apiKey>", API_KEY).replace("<city>", city);
         return restTemplate.exchange(finalAPI, HttpMethod.GET, null, Weather.class).getBody();
     }
 }
