@@ -2,6 +2,7 @@ package com.example.JournalApp.controller;
 
 import com.example.JournalApp.api.Weather;
 import com.example.JournalApp.model.User;
+import com.example.JournalApp.repository.UserRepoImpl;
 import com.example.JournalApp.service.UserService;
 import com.example.JournalApp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class UserController {
 
     @Autowired
     private WeatherService weatherService;
+
+    @Autowired
+    private UserRepoImpl repoImpl;
 
     @GetMapping("")
     public ResponseEntity<List<User>> getAll() {
@@ -83,5 +87,8 @@ public class UserController {
         return new ResponseEntity<>("", HttpStatus.BAD_GATEWAY);
     }
 
-
+    @GetMapping("/usersWithSA")
+    public ResponseEntity<List<User>> getUsersWithSA() {
+        return new ResponseEntity<>(repoImpl.getUserSA(), HttpStatus.OK);
+    }
 }
