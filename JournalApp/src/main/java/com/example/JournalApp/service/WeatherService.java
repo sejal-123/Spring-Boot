@@ -27,8 +27,24 @@ public class WeatherService {
     @Autowired
     private AppCache appCache;
 
+    @Autowired
+    private RedisService redisService;
+
     public Weather getWeather(String city) {
-        String finalAPI=appCache.cacheMap.get(AppCache.keys.WEATHER_API.toString()).replace("<apiKey>", API_KEY).replace("<city>", city);
-        return restTemplate.exchange(finalAPI, HttpMethod.GET, null, Weather.class).getBody();
+        Weather weather = redisService.get("weather_of_" + city, Weather.class);
+        if (weather != null) {
+            System.out.println("From here");
+            return weather;
+        } else {
+            String finalAPI=appCache.cacheMap.get(AppCache.keys.WEATHER_API.toString()).replace("<apiKey>", API_KEY).replace("<city>", city);
+            Weather response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, Weather.class).getBody();
+            System.out.println(response);
+            if (response != null) {
+                redisService.set("weather_of_" + city, response, 3001L);
+            }
+            System.out.println("Or here");
+            return response;
+        }
+
     }
 }
